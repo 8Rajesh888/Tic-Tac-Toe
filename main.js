@@ -10,7 +10,7 @@ function loop(world) {
 function main() {
     const world = sketch.setup();
     loop(world);
-    sketch.teardown();
+    sketch.teardown(world);
 }
 
 main();
