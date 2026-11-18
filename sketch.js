@@ -14,7 +14,6 @@ function setup() {
     r.InitWindow(screenWidth, screenHeight, "FUN");
     r.SetTargetFPS(FPS);
 
-    // Center each block slightly inside its grid cell
     const offsetX = (cellWidth - width) / 2;
     const offsetY = (cellHeight - height) / 2;
 
@@ -49,7 +48,6 @@ function update(world) {
     world.cf++;
     const char = r.GetCharPressed();
 
-    // Only respond to number keys '1' (49) through '9' (57)
     if (char >= 49 && char <= 57) {
         const index = char - 49;
 

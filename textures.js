@@ -23,7 +23,7 @@ function drawGridLines() {
 
 const getCrossTexture = function () {
     const target2 = r.LoadRenderTexture(width, height);
-    const pad = Math.min(width, height) * 0.1; // Scales padding with screen size
+    const pad = Math.min(width, height) * 0.1;
 
     r.BeginTextureMode(target2);
     r.ClearBackground(bgColor);
@@ -36,7 +36,7 @@ const getCrossTexture = function () {
 
 const getCircleTexture = function () {
     const target1 = r.LoadRenderTexture(width, height);
-    const line = (width > height ? height : width) / 3; // Fixed 'heigth' typo
+    const line = (width > height ? height : width) / 3;
 
     r.BeginTextureMode(target1);
     r.ClearBackground(bgColor);
