@@ -21,6 +21,7 @@ function createGameState() {
         { x: cellWidth + offsetX, y: offsetY },
         { x: cellWidth * 2 + offsetX, y: offsetY },
     ];
+    const { getBG, getCircleTexture, getCrossTexture } = textures.createTextures();
 
     return {
         cf: 0,
@@ -28,10 +29,10 @@ function createGameState() {
         board: Array(9).fill(null),
         cells,
         target: {
-            0: textures.getCircleTexture(),
-            1: textures.getCrossTexture(),
+            0: getCircleTexture,
+            1: getCrossTexture,
         },
-        mainTarget: textures.getBG(),
+        mainTarget: getBG,
     };
 }
 

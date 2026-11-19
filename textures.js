@@ -64,9 +64,13 @@ const updateTarget = function (mainTarget, target, { x, y }, turn) {
     r.EndTextureMode();
 };
 
+const createTextures = function () {
+    const getCircleTexture = getCircleTexture()
+    const getCrossTexture = getCrossTexture()
+    const getBG = getBG()
+    return { getBG, getCircleTexture, getCrossTexture };
+}
 module.exports = {
-    getCrossTexture,
-    getCircleTexture,
-    getBG,
+    createTextures,
     updateTarget,
 };
