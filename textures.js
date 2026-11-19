@@ -57,9 +57,9 @@ const getBG = function () {
     return set;
 };
 
-const updateTarget = function (mainTarget, target, present, turn) {
+const updateTarget = function (mainTarget, target, { x, y }, turn) {
     r.BeginTextureMode(mainTarget);
-    r.DrawTexture(target[turn % 2].texture, present.x, present.y, r.WHITE);
+    r.DrawTexture(target[turn % 2].texture, x, y, r.WHITE);
     drawGridLines();
     r.EndTextureMode();
 };

@@ -1,13 +1,13 @@
 const sketch = require("./sketch");
 
-function loop(world) {
+const loop = function (world) {
     while (sketch.running()) {
         sketch.update(world);
         sketch.draw(world);
     }
 }
 
-function main() {
+const main = function () {
     const world = sketch.setup();
     loop(world);
     sketch.teardown(world);
